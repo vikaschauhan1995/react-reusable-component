@@ -1,0 +1,19 @@
+.Matrix__container {
+  // display: flex;
+}
+
+.Matrix__container .Matrix__row {
+  // border: "1px solid yello";
+  display: flex;
+}
+
+.Matrix__cell {
+  box-sizing: content-box;
+  justify-content: center;
+  display: flex;
+}
+
+
+.Matrix__innerbody {
+  align-self: center;
+}

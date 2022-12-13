@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../color";
+
+.container {
+  background-color: rgb(194, 194, 194);
+  height: $cmd-height-custom;
+  overflow: scroll;
+  // border: 2px solid $grey-color;
+}

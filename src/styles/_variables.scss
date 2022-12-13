@@ -1,0 +1,14 @@
+@import 'color';
+@import 'dimen';
+
+:export {
+  blackColor: $black-color;
+  padding1: $padding-1;
+  greyColor: $grey-color;
+  whiteColor: $white-color;
+}
+
+:export {
+  cmdHeightCustom: $cmd-height-custom;
+  matrixCellDimen: $matrix-cell-dimen;
+}
