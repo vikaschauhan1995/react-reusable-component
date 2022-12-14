@@ -20,24 +20,25 @@ const Post = () => {
             setIsSubmitButtonDisable(true);
             setInput('');
             await animatePost("Post__animated_post_text_container", input, POST_ANIMATION_TARGET_CONTAINER);
-            debugger;
+            // debugger;
             // setIsAnimationEnd(true);
         }
     }
     return <div className="Post__container">
         <div className="Post__header">
             <div className="Post__header_input">
-                <div id="Post__animated_post_text_container">
-                </div>
+                <div id="Post__animated_post_text_container"></div>
                 <Form.Control id="post_field" value={input} onChange={handleInputChange} type="text"
                 // placeholder={isAnimationEnd ? null : "Please write something"}
                 />
             </div>
             <div>
-                <Button onClick={submitClick} variant="success" disabled={isSubmitButtonDisable}>Submit</Button>
+                <Button onClick={submitClick} variant="success"
+                // disabled={isSubmitButtonDisable}
+                >Submit</Button>
             </div>
         </div>
-        <div className="Post__body">
+        <div className="Post__body" style={{ paddingTop: "0px" }}>
             <div id={POST_ANIMATION_TARGET_CONTAINER} className="post_animTargetContainer" style={{ marginTop: '50px' }}></div>
         </div>
         <div style={{ height: "300px" }}></div>

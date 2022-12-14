@@ -49,19 +49,37 @@ function getXYaxisById(element) {
 
 async function transitionElement(element, elementFromPosition, translateToPosition) {
     element.style.position = 'absolute';
-    let isDown = false;
-    let topEnd = translateToPosition.top - 50;
+    // let isDown = false;
+    let topEnd = -50;
+    let bottomEnd = translateToPosition.top + 30;
+    const actualEnd = translateToPosition.top;
     let topDone = false;
     let top = 0;
     const interval = setInterval(() => {
-        top += 10;
-
-        if (top >= translateToPosition.top) {
-            top = translateToPosition.top;
-            clearInterval(interval);
+        if (!topDone) {
+            top -= 20;
+        } else if (topDone) {
+            top += 20;
         }
+
+        if (top <= topEnd) {
+            topDone = true;
+            // debugger;
+        } else if (top >= bottomEnd && top >= actualEnd) {
+            topDone = false;
+            if (top > actualEnd) {
+                top = actualEnd;
+                clearInterval(interval);
+                // debugger;
+            }
+        }
+        // if (top >= translateToPosition.top) {
+        //     top = translateToPosition.top;
+        //     clearInterval(interval);
+        // }
         element.style.top = top + 'px';
         element.style.left = translateToPosition.left + 'px';
+        // debugger;
     }, 50);
     // element.style.top = translateToPosition.top + 'px';
     // element.style.left = translateToPosition.left + 'px';
