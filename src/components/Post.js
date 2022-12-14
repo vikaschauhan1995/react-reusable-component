@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { animatePost } from '../animation/animatePost';
+import { POST_ANIMATION_TARGET_CONTAINER } from '../static/constant';
 import "../styles/component/Post.scss";
 
 const Post = () => {
@@ -11,11 +12,11 @@ const Post = () => {
     }
     const submitClick = () => {
         console.log('submitClick');
-        if(input.length == 0){
+        if (input.length == 0) {
             setInput("Here it's you'r name");
-        }else{
+        } else {
             setIsSubmitButtonDisable(true);
-            animatePost("Post__animated_post_text_container");
+            animatePost("Post__animated_post_text_container", input, POST_ANIMATION_TARGET_CONTAINER);
         }
     }
     return <div className="Post__container">
@@ -27,6 +28,9 @@ const Post = () => {
             <div>
                 <Button onClick={submitClick} variant="success" disabled={isSubmitButtonDisable}>Submit</Button>
             </div>
+        </div>
+        <div className="Post__body">
+            <div id={POST_ANIMATION_TARGET_CONTAINER} className="post_animTargetContainer" style={{ marginTop: '10px' }}></div>
         </div>
     </div>
 }

@@ -34,3 +34,6 @@ export const CELL_INDEX = 'cellIndex';
 
 export const DIAMOND_METRIX_SHAPE = 'diamondMetrixShape';
 export const DIAMOND_OUTLINE_METRIX_SHAPE = 'diamondOutlineMetrixShape';
+
+export const POST__COPY_CHARACTER_KEY = 'Post__copy_character_';
+export const POST_ANIMATION_TARGET_CONTAINER = 'Post__animationTargetContainer'
