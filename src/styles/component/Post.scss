@@ -23,11 +23,16 @@
 
 #Post__animated_post_text_container span {
     color: red;
-    transition: all 0.2s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
 }
+
 
 .post_animTargetContainer {
     height: 30px;
-    width: 200px;
+    width: 500px;
     border: 2px solid violet;
 }

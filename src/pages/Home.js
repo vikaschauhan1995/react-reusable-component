@@ -22,7 +22,7 @@ function Home() {
           </Col>
           <Col xs={12} lg="6" style={{ border: "1px solid red" }}>
             <CMD>
-              <VisualCMD data={scriptArray} />
+              {/* <VisualCMD data={scriptArray} /> */}
             </CMD>
           </Col>
         </Row>
