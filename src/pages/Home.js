@@ -29,7 +29,11 @@ function Home() {
         <Row className="justify-content-md-center">
           <Col xs={12} lg="6" style={{ border: "1px solid red" }}>
             <TextColorWrapper>
-              <SlimeText text="Vikas Chauhan" />
+              <SlimeText text="This is extra small text" size="xs" />
+              <SlimeText text="Thi is small text" size="sm" />
+              <SlimeText text="This is medium text" size="md" />
+              <SlimeText text="This is large text" size="lg" />
+              <SlimeText text="This is extra large text" size="xl" />
             </TextColorWrapper>
           </Col>
           <Col xs={12} lg="6" style={{ border: "1px solid red" }}>

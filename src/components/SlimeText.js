@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import '../styles/component/SlimeText.scss'
-
-function SlimeText({ text }) {
-  const primaryTextSize = '50px';
-  const secondaryTextSize = '40px';
-  const tertairyTextSize = '35px';
+import '../styles/component/SlimeText.scss';
+import {
+  SLIME_TEXT_SIZES,
+  DEFAULT_TEXT_SIZE_KEY,
+  PRIMARY_TEXT_SIZE_KEY,
+  SECONDARY_TEXT_SIZE_KEY,
+  TERTAIRY_TEXT_SIZE_KEY
+} from '../static/constant';
+// all sizes (xs, sm, md, lg, xl);
+function SlimeText({ text, size = "md" }) {
+  const primaryTextSize = SLIME_TEXT_SIZES[size][PRIMARY_TEXT_SIZE_KEY];
+  const secondaryTextSize = SLIME_TEXT_SIZES[size][SECONDARY_TEXT_SIZE_KEY];
+  const tertairyTextSize = SLIME_TEXT_SIZES[size][TERTAIRY_TEXT_SIZE_KEY];
 
   const [primaryText, setPrimaryText] = useState(null);
 
@@ -23,7 +30,7 @@ function SlimeText({ text }) {
     } else if (rightTertairyText === i || leftTertairyText === i) {
       return tertairyTextSize;
     } else {
-      return '25px';
+      return SLIME_TEXT_SIZES[size][DEFAULT_TEXT_SIZE_KEY];
     }
   }
   const mouseOverText = (i) => {

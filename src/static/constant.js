@@ -36,4 +36,42 @@ export const DIAMOND_METRIX_SHAPE = 'diamondMetrixShape';
 export const DIAMOND_OUTLINE_METRIX_SHAPE = 'diamondOutlineMetrixShape';
 
 export const POST__COPY_CHARACTER_KEY = 'Post__copy_character_';
-export const POST_ANIMATION_TARGET_CONTAINER = 'Post__animationTargetContainer'
+export const POST_ANIMATION_TARGET_CONTAINER = 'Post__animationTargetContainer';
+
+export const DEFAULT_TEXT_SIZE_KEY = 'DefaultTextSsizeKey';
+export const PRIMARY_TEXT_SIZE_KEY = 'PrimaryTextSizeKey';
+export const SECONDARY_TEXT_SIZE_KEY = 'SecondaryTextSizeKey';
+export const TERTAIRY_TEXT_SIZE_KEY = 'TerroredTextSizeKey';
+
+export const SLIME_TEXT_SIZES = {
+  "xs": {
+    [DEFAULT_TEXT_SIZE_KEY]: "11px",
+    [PRIMARY_TEXT_SIZE_KEY]: '22px',
+    [SECONDARY_TEXT_SIZE_KEY]: '18px',
+    [TERTAIRY_TEXT_SIZE_KEY]: '14px',
+  },
+  "sm": {
+    [DEFAULT_TEXT_SIZE_KEY]: "15px",
+    [PRIMARY_TEXT_SIZE_KEY]: '30px',
+    [SECONDARY_TEXT_SIZE_KEY]: '25px',
+    [TERTAIRY_TEXT_SIZE_KEY]: '20px',
+  },
+  "md": {
+    [DEFAULT_TEXT_SIZE_KEY]: "25px",
+    [PRIMARY_TEXT_SIZE_KEY]: '50px',
+    [SECONDARY_TEXT_SIZE_KEY]: '40px',
+    [TERTAIRY_TEXT_SIZE_KEY]: '35px',
+  },
+  "lg": {
+    [DEFAULT_TEXT_SIZE_KEY]: "35px",
+    [PRIMARY_TEXT_SIZE_KEY]: '70px',
+    [SECONDARY_TEXT_SIZE_KEY]: '55px',
+    [TERTAIRY_TEXT_SIZE_KEY]: '45px',
+  },
+  "xl": {
+    [DEFAULT_TEXT_SIZE_KEY]: "40px",
+    [PRIMARY_TEXT_SIZE_KEY]: '80px',
+    [SECONDARY_TEXT_SIZE_KEY]: '65px',
+    [TERTAIRY_TEXT_SIZE_KEY]: '50px',
+  },
+}; 
